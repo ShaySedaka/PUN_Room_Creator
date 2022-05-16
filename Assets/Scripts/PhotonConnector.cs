@@ -53,5 +53,10 @@ public class PhotonConnector : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("RoomScene");
     }
 
+    public override void OnJoinedRoom()
+    {
+        LoadRoomLevel();
+    }
+
 
 }

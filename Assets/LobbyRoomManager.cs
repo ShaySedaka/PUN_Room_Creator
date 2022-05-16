@@ -15,6 +15,8 @@ public class LobbyRoomManager : MonoBehaviourPunCallbacks
 
     private void UpdateCachedRoomList(List<RoomInfo> roomList)
     {
+        roomlist.text = "";
+
         for (int i = 0; i < roomList.Count; i++)
         {
             RoomInfo info = roomList[i];
@@ -30,7 +32,7 @@ public class LobbyRoomManager : MonoBehaviourPunCallbacks
 
         foreach (string roomName in cachedRoomList.Keys)
         {
-            roomlist.text += " " + roomName;
+            roomlist.text += "\n" + roomName;
         }
     }
 
